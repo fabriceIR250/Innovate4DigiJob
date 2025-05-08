@@ -56,16 +56,16 @@ const Activities = () => {
   }, [controls, inView]);
 
   return (
-    <section ref={ref} className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <section ref={ref} className="py-22 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto">
-        <motion.h2 
+        <h2 
           initial={{ opacity: 0, y: 20 }}
           animate={controls}
           transition={{ delay: 0.2 }}
           className="text-3xl sm:text-4xl font-bold text-center text-blue-600 mb-12"
         >
           What We Do
-        </motion.h2>
+        </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {activities.map((activity, index) => (

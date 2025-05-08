@@ -10,6 +10,7 @@ import Impact from './pages/Impact';
 import Team from './pages/Team'; 
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
+import JoinUs from './pages/JoinUs';
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/Impact" element={<Impact />} />
       <Route path="/team" element={<Team />} />
       <Route path="/Contact" element={<Contact />} />
+      <Route path="/JoinUs" element={<JoinUs />} />
     </Routes>
     </Router>
    <Footer/>

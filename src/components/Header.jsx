@@ -117,31 +117,11 @@ export default function Header() {
           <ul className="flex space-x-8">
             <NavLink href="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" />
             <NavLink href="/About" icon={<Info className="w-5 h-5 mr-1" />} text="About" />
-            <NavLink href="/activities" icon={<Briefcase className="w-5 h-5 mr-1" />} text="Activities" hasDropdown={true} />
+            <NavLink href="/activities" icon={<Briefcase className="w-5 h-5 mr-1" />} text="Activities"/>
             <NavLink href="/impact" icon={<BarChart className="w-5 h-5 mr-1" />} text="Impact" />
             <NavLink href="/team" icon={<Users className="w-5 h-5 mr-1" />} text="Team" />
             <NavLink href="/contact" icon={<Mail className="w-5 h-5 mr-1" />} text="Contact" />
           </ul>
-          
-          {/* Activities Dropdown Menu */}
-          <div 
-            className={`absolute mt-2 py-2 bg-white rounded-lg shadow-xl transition-all duration-300 transform origin-top min-w-[200px] ${
-              isDropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
-            }`}
-          >
-            <a href="/workshops" className="block px-4 py-2 text-blue-600 hover:bg-blue-50 transition-colors duration-200">
-              Workshops
-            </a>
-            <a href="/trainings" className="block px-4 py-2 text-blue-600 hover:bg-blue-50 transition-colors duration-200">
-              Trainings
-            </a>
-            <a href="/events" className="block px-4 py-2 text-blue-600 hover:bg-blue-50 transition-colors duration-200">
-              Events
-            </a>
-            <a href="/programs" className="block px-4 py-2 text-blue-600 hover:bg-blue-50 transition-colors duration-200">
-              Programs
-            </a>
-          </div>
         </nav>
 
         {/* Join Us Button */}
@@ -195,43 +175,14 @@ export default function Header() {
           <ul className="space-y-4">
             <NavLink href="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" />
             <NavLink href="/About" icon={<Info className="w-5 h-5 mr-1" />} text="About" />
-            
-            {/* Collapsible Activities Section */}
-            <li className="relative">
-              <button 
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center w-full text-blue-600 hover:text-blue-800 transition-all duration-300"
-              >
-                <Briefcase className="w-5 h-5 mr-1" />
-                <span className="ml-1">Activities</span>
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              <div className={`mt-2 pl-6 border-l-2 border-blue-100 space-y-2 transition-all duration-300 ${
-                isDropdownOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
-              }`}>
-                <a href="/workshops" className="block py-1 text-blue-600 hover:text-blue-800 transition-colors duration-200">
-                  Workshops
-                </a>
-                <a href="/trainings" className="block py-1 text-blue-600 hover:text-blue-800 transition-colors duration-200">
-                  Trainings
-                </a>
-                <a href="/events" className="block py-1 text-blue-600 hover:text-blue-800 transition-colors duration-200">
-                  Events
-                </a>
-                <a href="/programs" className="block py-1 text-blue-600 hover:text-blue-800 transition-colors duration-200">
-                  Programs
-                </a>
-              </div>
-            </li>
-            
+            <NavLink href="/activities" icon={<Briefcase className="w-5 h-5 mr-1" />} text="activities" />
             <NavLink href="/impact" icon={<BarChart className="w-5 h-5 mr-1" />} text="Impact" />
             <NavLink href="/team" icon={<Users className="w-5 h-5 mr-1" />} text="Team" />
             <NavLink href="#contact" icon={<Mail className="w-5 h-5 mr-1" />} text="Contact" />
             
             <li className="pt-4">
               <a 
-                href="/join" 
+                href="/joinUs" 
                 className="inline-flex items-center bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Join Us
