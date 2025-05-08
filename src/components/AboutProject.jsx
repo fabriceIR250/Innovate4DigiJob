@@ -32,7 +32,7 @@ const objectives = [
 
 const AboutProject = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-12">
+    <section id='AboutProject' className="bg-white py-16 px-6 md:px-12">
       <div className="max-w-6xl mx-auto space-y-16">
 
         {/* About the Project */}
