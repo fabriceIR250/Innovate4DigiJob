@@ -89,7 +89,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-22 px-4 sm:px-6 lg:px-8">
       <motion.div
         initial="hidden"
         animate="visible"
