@@ -11,6 +11,7 @@ import Team from './pages/Team';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import JoinUs from './pages/JoinUs';
+import PageNotFound from './pages/PageNotFound';
 
 
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/team" element={<Team />} />
       <Route path="/Contact" element={<Contact />} />
       <Route path="/JoinUs" element={<JoinUs />} />
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
     </Router>
    <Footer/>
