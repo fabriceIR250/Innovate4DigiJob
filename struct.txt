@@ -1,0 +1,14 @@
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Activities.jsx
+│   ├── Impact.jsx
+│   ├── Team.jsx
+│   ├── JoinUs.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+├── App.jsx
+├── index.jsx
+└── index.css
