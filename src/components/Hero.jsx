@@ -7,12 +7,12 @@ export default function Hero() {
             <p className="text-blue-600  text-xl mb-8">Transforming education and job creation with technology and creativity in Rubavu, Rwanda.</p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-blue-600 hover:bg-orange-400 text-white font-bold py-3 px-6 rounded-lg transition">
-                Join the Movement
+                Join Us
               </button>
               <button className="bg-blue-600 hover:bg-orange-400 text-primary font-bold py-3 px-6 rounded-lg transition">
                 Our Projects
               </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-white hover:text-primary font-bold py-3 px-6 rounded-lg transition">
+              <button className="border-2 border-blue-600 hover:border-white text-blue-600 hover:bg-orange-400 hover:text-white font-bold py-3 px-6 rounded-lg transition">
                 Contact Us
               </button>
             </div>
