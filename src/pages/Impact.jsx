@@ -1,115 +1,161 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaQuoteLeft, FaUserGraduate, FaChalkboardTeacher, FaUsers } from 'react-icons/fa';
 
 const Impact = () => {
+  const stats = [
+    {
+      value: "100+",
+      label: "students trained",
+      description: "Empowered with essential digital tools",
+      icon: <FaUserGraduate className="text-blue-500 text-3xl" />,
+      bgColor: "bg-blue-50"
+    },
+    {
+      value: "10+",
+      label: "projects launched",
+      description: "Innovations solving real problems",
+      icon: <FaChalkboardTeacher className="text-green-500 text-3xl" />,
+      bgColor: "bg-green-50"
+    },
+    {
+      value: "3",
+      label: "community issues addressed",
+      description: "Tech solutions applied locally",
+      icon: <FaUsers className="text-orange-500 text-3xl" />,
+      bgColor: "bg-orange-50"
+    }
+  ];
+
+  const testimonials = [
+    {
+      quote: "This program has opened my eyes to how I can solve problems with technology. I feel empowered and confident!",
+      author: "Student Participant",
+      role: "Bootcamp Graduate",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&h=128&q=80"
+    },
+    {
+      quote: "Innovate4DigiJob is not just a project—it's a movement toward a digital future for our community.",
+      author: "Jean d'Amour",
+      role: "Community Leader",
+      avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&h=128&q=80"
+    }
+  ];
+
   return (
-    <section className="bg-gray-50 py-16 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto space-y-16">
-        
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-7xl mx-auto">
         {/* Impact Section */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="space-y-6"
+          viewport={{ once: true, margin: "-100px" }}
+          className="mb-20"
         >
-          <h2 className="text-4xl font-bold text-blue-600">Real Change, Real Impact</h2>
-          <p className="text-lg text-gray-700">Here's what we've achieved through Innovate4DigiJob.</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center"
+          <div className="text-center mb-12">
+            <motion.h2 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-3xl sm:text-4xl font-bold text-blue-600 mb-4"
             >
-              <img
-                src="https://media.mktg.workday.com/is/image/workday/img-group-of-employees-training-1?fmt=png-alpha&wid=1000"
-                alt="Group of students in training"
-                loading="lazy"
-                className="w-full h-40 object-cover rounded-xl mb-4"
-              />
-              <h4 className="text-xl font-semibold text-blue-600">100+ students trained</h4>
-              <p className="text-gray-600">Empowered with essential digital tools.</p>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center"
+              Real Change, Real Impact
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-lg text-gray-600 max-w-3xl mx-auto"
             >
-              <img
-                src="https://assets.entrepreneur.com/content/3x2/2000/1646925976-Ent-ProjectMGMT.jpeg"
-                alt="Project team working"
-                loading="lazy"
-                className="w-full h-40 object-cover rounded-xl mb-4"
-              />
-              <h4 className="text-xl font-semibold text-blue-600">10+ projects launched</h4>
-              <p className="text-gray-600">Innovations led by students to solve real problems.</p>
-            </motion.div>
+              Here's what we've achieved through Innovate4DigiJob
+            </motion.p>
+          </div>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center"
-            >
-              <img
-                src="https://idsb.tmgrup.com.tr/2014/09/07/HaberDetay/1410101376458.jpg"
-                alt="Community engagement scene"
-                loading="lazy"
-                className="w-full h-40 object-cover rounded-xl mb-4"
-              />
-              <h4 className="text-xl font-semibold text-blue-600">3 issues addressed</h4>
-              <p className="text-gray-600">Tech solutions applied to real community challenges.</p>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 + 0.4, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className={`${stat.bgColor} p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300`}
+              >
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-sm mb-4 mx-auto">
+                  {stat.icon}
+                </div>
+                <h3 className="text-4xl font-bold text-center text-gray-800 mb-2">
+                  {stat.value}
+                </h3>
+                <p className="text-lg font-semibold text-center text-blue-600 mb-2">
+                  {stat.label}
+                </p>
+                <p className="text-gray-600 text-center">
+                  {stat.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
         {/* Testimonials Section */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="space-y-6"
+          viewport={{ once: true, margin: "-100px" }}
         >
-          <h3 className="text-3xl font-semibold text-blue-600">What People Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="bg-white p-6 rounded-2xl shadow-md border border-gray-100"
+          <div className="text-center mb-12">
+            <motion.h3
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-3xl font-semibold text-blue-600 mb-4"
             >
-              <p className="italic text-gray-700">
-                "This program has opened my eyes to how I can solve problems with technology. I feel empowered and confident!"
-              </p>
-              <div className="flex items-center mt-4">
-                <img
-                  src="https://library.ascd.org/m/18941d1e7c006e13/webimage-0321_41-46_iStock-879747038_CSI.jpg"
-                  alt="Portrait of student participant"
-                  loading="lazy"
-                  className="w-15 h-15 rounded-full mr-3 object-cover"
-                />
-                <span className="text-sm font-semibold text-blue-600">— Student Participant</span>
-              </div>
-            </motion.div>
+              What People Say
+            </motion.h3>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-gray-600 max-w-2xl mx-auto"
+            >
+              Hear from those who have experienced Innovate4DigiJob firsthand
+            </motion.p>
+          </div>
 
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="bg-white p-6 rounded-2xl shadow-md border border-gray-100"
-            >
-              <p className="italic text-gray-700">
-                "Innovate4DigiJob is not just a project—it's a movement toward a digital future for our community."
-              </p>
-              <div className="flex items-center mt-4">
-                <img
-                  src="https://media.istockphoto.com/id/2185791629/photo/diverse-business-colleagues-shaking-hands-in-a-modern-office.jpg?s=612x612&w=0&k=20&c=eYfZfzK0TG2LuW7nW9UtbztrefGjFtzh7pcwgK2kezI="
-                  alt="Portrait of community leader"
-                  loading="lazy"
-                  className="w-15 h-15 rounded-full mr-3 object-cover"
-                />
-                <span className="text-sm font-semibold text-blue-600">— Community Leader</span>
-              </div>
-            </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.2 + 0.4, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 relative"
+              >
+                <FaQuoteLeft className="text-gray-200 text-5xl absolute top-4 left-4" />
+                <p className="text-gray-700 text-lg relative z-10 pl-8 mb-6">
+                  {testimonial.quote}
+                </p>
+                <div className="flex items-center">
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.author}
+                    className="w-12 h-12 rounded-full object-cover mr-4"
+                  />
+                  <div>
+                    <p className="font-semibold text-blue-600">{testimonial.author}</p>
+                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
-
       </div>
     </section>
   );
