@@ -19,7 +19,7 @@ export default function Hero() {
           </div>
           <div className="md:w-1/2">
             <img 
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+              src="https://images.squarespace-cdn.com/content/v1/5e99665d59916e47fbab549e/1626372841603-WKB3UW6CCDZX40CMLXFR/WikiAfrica_Schools_training_African_School_for_Excellence_%283%29.jpg" 
               alt="Students engaged in digital learning" 
               className="rounded-lg shadow-2xl"
             />
