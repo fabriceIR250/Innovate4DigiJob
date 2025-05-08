@@ -237,7 +237,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border ${
+                  className={`w-full px-4 py-3 border outline-blue-200 ${
                     errors.name ? "border-red-500" : "border-gray-300"
                   } rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition`}
                   placeholder="Your name"
@@ -260,7 +260,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border ${
+                  className={`w-full px-4 py-3 border outline-blue-200 ${
                     errors.email ? "border-red-500" : "border-gray-300"
                   } rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition`}
                   placeholder="your.email@example.com"
@@ -283,7 +283,7 @@ const Contact = () => {
                   rows="5"
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border ${
+                  className={`w-full px-4 py-3 border outline-blue-200 ${
                     errors.message ? "border-red-500" : "border-gray-300"
                   } rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition`}
                   placeholder="Your message here..."
