@@ -120,7 +120,7 @@ export default function Header() {
             <NavLink href="/activities" icon={<Briefcase className="w-5 h-5 mr-1" />} text="Activities" hasDropdown={true} />
             <NavLink href="/impact" icon={<BarChart className="w-5 h-5 mr-1" />} text="Impact" />
             <NavLink href="/team" icon={<Users className="w-5 h-5 mr-1" />} text="Team" />
-            <NavLink href="#contact" icon={<Mail className="w-5 h-5 mr-1" />} text="Contact" />
+            <NavLink href="/contact" icon={<Mail className="w-5 h-5 mr-1" />} text="Contact" />
           </ul>
           
           {/* Activities Dropdown Menu */}
