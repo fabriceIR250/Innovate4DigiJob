@@ -1,29 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Home, Info, Briefcase, BarChart, Users, Mail, ChevronDown } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("/");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  
-  // Set initial active link based on current path when component mounts
-  useEffect(() => {
-    const handleRouteChange = () => {
-      const currentPath = window.location.pathname;
-      setActiveLink(currentPath === "" ? "/" : currentPath);
-    };
-    
-    // Initial check
-    handleRouteChange();
-    
-    // Listen for popstate events (browser back/forward buttons)
-    window.addEventListener('popstate', handleRouteChange);
-    
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, []);
+  const location = useLocation();
+  const navigate = useNavigate();
   
   // Handle scroll effect with threshold and easing
   useEffect(() => {
@@ -53,13 +37,13 @@ export default function Header() {
   };
 
   // NavLink component with animations and active state
-  const NavLink = ({ href, icon, text, hasDropdown = false }) => {
-    const isActive = activeLink === href;
+  const NavLink = ({ to, icon, text, hasDropdown = false }) => {
+    const isActive = location.pathname === to;
     
     return (
       <li className="relative">
-        <a 
-          href={href}
+        <Link 
+          to={to}
           className={`group flex items-center transition-all duration-300 ${
             isActive ? 'text-blue-600 font-medium' : 'text-blue-600 hover:text-blue-800'
           }`}
@@ -68,9 +52,6 @@ export default function Header() {
               e.preventDefault();
               toggleDropdown();
             } else {
-              // Update the active link state
-              setActiveLink(href);
-              
               // Close mobile menu if open
               if (isMobileMenuOpen) {
                 setIsMobileMenuOpen(false);
@@ -88,7 +69,7 @@ export default function Header() {
               isActive ? 'w-full' : 'w-0 group-hover:w-full'
             }`}></span>
           </span>
-        </a>
+        </Link>
       </li>
     );
   };
@@ -104,37 +85,37 @@ export default function Header() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo with animation */}
         <div className="flex items-center space-x-2">
-          <h1 className="text-blue-600 text-xl font-bold relative group">
+          <Link to="/" className="text-blue-600 text-xl font-bold relative group">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-500 transition-all duration-500">
               CBG II Innovate4DigiJob
             </span>
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-700 to-blue-500 group-hover:w-full transition-all duration-700"></span>
-          </h1>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:block">
           <ul className="flex space-x-8">
-            <NavLink href="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" />
-            <NavLink href="/About" icon={<Info className="w-5 h-5 mr-1" />} text="About" />
-            <NavLink href="/activities" icon={<Briefcase className="w-5 h-5 mr-1" />} text="Activities"/>
-            <NavLink href="/impact" icon={<BarChart className="w-5 h-5 mr-1" />} text="Impact" />
-            <NavLink href="/team" icon={<Users className="w-5 h-5 mr-1" />} text="Team" />
-            <NavLink href="/contact" icon={<Mail className="w-5 h-5 mr-1" />} text="Contact" />
+            <NavLink to="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" />
+            <NavLink to="/about" icon={<Info className="w-5 h-5 mr-1" />} text="About" />
+            <NavLink to="/activities" icon={<Briefcase className="w-5 h-5 mr-1" />} text="Activities"/>
+            <NavLink to="/impact" icon={<BarChart className="w-5 h-5 mr-1" />} text="Impact" />
+            <NavLink to="/team" icon={<Users className="w-5 h-5 mr-1" />} text="Team" />
+            <NavLink to="/contact" icon={<Mail className="w-5 h-5 mr-1" />} text="Contact" />
           </ul>
         </nav>
 
         {/* Join Us Button */}
         <div className="hidden lg:flex space-x-4 items-center">
-          <a 
-            href="/joinUs" 
+          <button
+            onClick={() => navigate('/join')}
             className="flex items-center bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-md"
           >
             <span>Join Us</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </a>
+          </button>
         </div>
 
         {/* Mobile Menu Button with animation */}
@@ -173,23 +154,26 @@ export default function Header() {
       >
         <nav className="container mx-auto px-4 py-4">
           <ul className="space-y-4">
-            <NavLink href="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" />
-            <NavLink href="/About" icon={<Info className="w-5 h-5 mr-1" />} text="About" />
-            <NavLink href="/activities" icon={<Briefcase className="w-5 h-5 mr-1" />} text="activities" />
-            <NavLink href="/impact" icon={<BarChart className="w-5 h-5 mr-1" />} text="Impact" />
-            <NavLink href="/team" icon={<Users className="w-5 h-5 mr-1" />} text="Team" />
-            <NavLink href="#contact" icon={<Mail className="w-5 h-5 mr-1" />} text="Contact" />
+            <NavLink to="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" />
+            <NavLink to="/about" icon={<Info className="w-5 h-5 mr-1" />} text="About" />
+            <NavLink to="/activities" icon={<Briefcase className="w-5 h-5 mr-1" />} text="activities" />
+            <NavLink to="/impact" icon={<BarChart className="w-5 h-5 mr-1" />} text="Impact" />
+            <NavLink to="/team" icon={<Users className="w-5 h-5 mr-1" />} text="Team" />
+            <NavLink to="/contact" icon={<Mail className="w-5 h-5 mr-1" />} text="Contact" />
             
             <li className="pt-4">
-              <a 
-                href="/joinUs" 
+              <button
+                onClick={() => {
+                  navigate('/join');
+                  setIsMobileMenuOpen(false);
+                }}
                 className="inline-flex items-center bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Join Us
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </a>
+              </button>
             </li>
           </ul>
           

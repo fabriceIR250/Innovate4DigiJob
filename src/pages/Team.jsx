@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const teamMembers = [
   {
@@ -86,6 +87,8 @@ const TeamCard = ({ member, index }) => (
 );
 
 const Team = () => {
+  
+  const navigate = useNavigate();
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto">
@@ -160,8 +163,8 @@ const Team = () => {
             </div>
             <h3 className="text-xl font-semibold text-gray-500 mb-2">Join Our Team</h3>
             <p className="text-gray-400 text-center mb-4">We're always looking for talented individuals</p>
-            <button className="px-4 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors">
-              Contact Us
+            <button className="px-4 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors" onClick={() => navigate('/joinUs')}>
+              Join Us
             </button>
           </motion.div>
         </div>

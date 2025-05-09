@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronRight, ArrowRight, Users } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 // Counter component for animating numbers
 const AnimatedCounter = ({ end, duration, label }) => {
@@ -73,6 +74,7 @@ const AnimatedCounter = ({ end, duration, label }) => {
 };
 
 export default function Hero() {
+    const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
   
   // Animation on mount
@@ -112,22 +114,22 @@ export default function Hero() {
             
             {/* Stats with Animation Delay and Counter Animation */}
             <div className={`flex flex-wrap gap-8 mb-8 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <AnimatedCounter end={500} duration={2000} label="Students Trained" />
-              <AnimatedCounter end={15} duration={1500} label="Digital Projects" />
-              <AnimatedCounter end={85} duration={1800} label="Job Placement" />
+              <AnimatedCounter end={100} duration={2000} label="Students Trained" />
+              <AnimatedCounter end={10} duration={1500} label="Digital Projects" />
+              <AnimatedCounter end={3} duration={1800} label="Job Placement" />
             </div>
             
             {/* Buttons with Hover Animations */}
             <div className={`flex flex-wrap gap-4 transition-all duration-1000 delay-700 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <button className="group flex items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+              <button className="group flex items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg" onClick={() => navigate('/joinUs')}>
                 Join Us
                 <ChevronRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
-              <button className="group flex items-center bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50 font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+              <button className="group flex items-center bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50 font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg" onClick={() => navigate('/activities')}>
                 Our Projects
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
-              <button className="group flex items-center bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white border-2 border-blue-600 font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+              <button className="group flex items-center bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white border-2 border-blue-600 font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg" onClick={() => navigate('/contact')}>
                 <Users className="mr-2 h-5 w-5" />
                 Contact Us
               </button>
