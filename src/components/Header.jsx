@@ -108,7 +108,7 @@ export default function Header() {
         {/* Join Us Button */}
         <div className="hidden lg:flex space-x-4 items-center">
           <button
-            onClick={() => navigate('/join')}
+            onClick={() => navigate('/joinUs')}
             className="flex items-center bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-md"
           >
             <span>Join Us</span>
@@ -164,7 +164,7 @@ export default function Header() {
             <li className="pt-4">
               <button
                 onClick={() => {
-                  navigate('/join');
+                  navigate('/joinUs');
                   setIsMobileMenuOpen(false);
                 }}
                 className="inline-flex items-center bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
