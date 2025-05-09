@@ -20,7 +20,7 @@ const SplashScreen = ({ onFinish }) => {
   }, [onFinish]);
 
   // Split text for character animation
-  const mainText = "CBG II Innovate4DigiJob";
+  const mainText = "CBG 2 Innovate4DigiJob";
   const developers = ["devfab250", "&", "devprince250"];
 
   return (
