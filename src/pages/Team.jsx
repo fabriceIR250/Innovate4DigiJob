@@ -8,7 +8,7 @@ const teamMembers = [
     name: "Jean Claude Tuyizere",
     role: "Project Lead",
     description: "With over 10 years of experience in software development and ICT training, Jean Claude brings leadership, creativity, and commitment to youth empowerment. He's also the Managing Director of CR.ARICENT Technology.",
-    image: "blob:https://www.facebook.com/828d0bbb-2ea1-48a2-bdf7-20804ecaa2f4",
+    image: "https://scontent.fkgl4-1.fna.fbcdn.net/v/t39.30808-6/555387649_122152193066701722_8729400574102962775_n.webp?stp=dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=bdeb5f&_nc_ohc=PINPGcT388kQ7kNvwE9Ioas&_nc_oc=Adkyah9DPcfRUR6HucaE4b-4pPCm3ALH0J9UkAemkTBrJamiBVF-E7OZlS16TSuvRgg&_nc_zt=23&_nc_ht=scontent.fkgl4-1.fna&_nc_gid=C5S57e9c-3Zog3UmhQ_0HQ&oh=00_AfY_tfhcovp-w9xf5JRY1M03i6Ox7yMhpCKGuyBFjMHp2Q&oe=68DC08EB",
     email: "jsongclaude@gmail.com",
     linkedin: "https://www.linkedin.com/in/jean-c-09804214b/",
     github: "#"
