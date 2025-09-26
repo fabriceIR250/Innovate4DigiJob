@@ -8,7 +8,7 @@ const teamMembers = [
     name: "Jean Claude Tuyizere",
     role: "Project Lead",
     description: "With over 10 years of experience in software development and ICT training, Jean Claude brings leadership, creativity, and commitment to youth empowerment. He's also the Managing Director of CR.ARICENT Technology.",
-    image: "https://media.licdn.com/dms/image/v2/D4D35AQEtzZzP4b_pmg/profile-framedphoto-shrink_800_800/B4DZZd1RySG4Ak-/0/1745330970070?e=1747342800&v=beta&t=wrKDcrdYu6h1chDNV0gOVid4m4Oburr_6GkN38JAq9g",
+    image: "blob:https://www.facebook.com/828d0bbb-2ea1-48a2-bdf7-20804ecaa2f4",
     email: "jsongclaude@gmail.com",
     linkedin: "https://www.linkedin.com/in/jean-c-09804214b/",
     github: "#"
@@ -20,7 +20,7 @@ const developers = [
     name: "IRAFASHA Fabrice",
     role: "Web Developer",
     description: "Fabrice is a passionate web developer with a knack for creating user-friendly applications. He's dedicated to making technology accessible to all.",
-    image: "https://scontent.fkgl4-1.fna.fbcdn.net/v/t39.30808-6/473755721_1326293005219578_10654410461577753_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=jx6GPc_6r7sQ7kNvwF291bP&_nc_oc=AdkmercqG8EXKstJEql6ZNK6CFRSXZTR8TDPqsJioZu4GEYQeQdDYiXV0xrLcSxU5QU&_nc_zt=23&_nc_ht=scontent.fkgl4-1.fna&_nc_gid=38wGLrM94qGlLQ0-t1Z8aQ&oh=00_AfJs4TT6X544LTV5t7bHMnaXFEWx421pVw6DemAKcDz0Jg&oe=6822E282",
+    image: "https://scontent.fkgl4-1.fna.fbcdn.net/v/t39.30808-6/473755721_1326293005219578_10654410461577753_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=2a0l7ol6oOQQ7kNvwHRMm1e&_nc_oc=Adl5xErg6sTzH82pDH3wmt-f8i_alhtAGEDbIRaeo4be-TtQ1ecTmeLwajgaxjMY694&_nc_zt=23&_nc_ht=scontent.fkgl4-1.fna&_nc_gid=P_sA6_KBWvyE--kS4t0zAQ&oh=00_AfZEiCqMpiQ1bZ4pSMaowN0b2UPY-uiB8CeOFRciwNpHZg&oe=68DBE502",
     email: "irafashafabrice250@gmail.com",
     linkedin: "https://www.linkedin.com/in/irafasha-fabrice-4729b6363/",
     github: "#"
@@ -29,7 +29,7 @@ const developers = [
     name: "ISHIMWE Prince",
     role: "Web Designer",
     description: "Prince is a creative web designer with a passion for aesthetics and user experience. He believes in the power of design to transform ideas into reality.",
-    image: "https://scontent.fkgl4-1.fna.fbcdn.net/v/t39.30808-6/489928610_122135113598701722_3593409516722580159_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=lutYsP6FrxMQ7kNvwFCAqK6&_nc_oc=AdkLIaTVDzsvAJLVCiEJvmSGBamTM_gC4HfDJT136xybfo1a_juHtQWv9CMlQDc3HEY&_nc_zt=23&_nc_ht=scontent.fkgl4-1.fna&_nc_gid=_e2Ys3k6ELrdHBADmUdZTA&oh=00_AfITI5LMSJmoOv6P05bPHXp8fQtCZmewXvPkvcqFQbhljg&oe=6822E4E6",
+    image: "https://scontent.fkgl4-1.fna.fbcdn.net/v/t39.30808-6/499930439_122138242952701722_5860925860254434495_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=oYtjMzsiyR8Q7kNvwE1xQqJ&_nc_oc=AdljE0ig9yCbqqcsZUFwlK2DqhEmpyQiK424GoneC-lxU0EMX6YDoPysp4lKE25viY8&_nc_zt=23&_nc_ht=scontent.fkgl4-1.fna&_nc_gid=90XqW2qDAU_YzWXJ6UeIjA&oh=00_AfaoFhbvdtEL_Wh7fXAMxTIQd9kbdrUfz-HWi8cbt0OocA&oe=68DBD374",
     email: "pishimwe475@gmail.com",
     linkedin: "#",
     github: "#"
